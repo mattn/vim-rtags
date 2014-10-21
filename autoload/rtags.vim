@@ -11,7 +11,7 @@ function! rtags#run(opts, ...)
   if len(a:000) == 0
     let arg = input("RTags: ")
     if len(arg) == 0
-      exit
+      return
     endif
   endif
   cexpr rtags#expr(opts, arg)
